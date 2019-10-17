@@ -1,0 +1,15 @@
+{
+  "name": "jsx-test1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-plugin-transform-react-jsx": "^6.24.1"
+  }
+}
