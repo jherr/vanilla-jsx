@@ -14,14 +14,15 @@ const dom = (name, props, ...children) => {
   });
 
   (children || []).forEach(child => {
-    if (typeof child === 'string') {
-      elem.appendChild(document.createTextNode(child));
-    } else if(Array.isArray(child)) {
+    if(Array.isArray(child)) {
       child.forEach(c => elem.appendChild(c));
-    } else {
+    } else if (typeof child === 'object') {
       elem.appendChild(child);
+    } else {
+      elem.appendChild(document.createTextNode(child));
     }
   });
+
   return elem;
 };
 
